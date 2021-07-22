@@ -47,7 +47,7 @@ module Jekyll
 
       # Page title without site title or description appended
       def page_title
-        @page_title ||= format_string(page["title"]) || site_title
+        @page_title ||= format_string(page["meta_title"]) || page["title"]) || site_title
       end
 
       def site_tagline_or_description
@@ -90,7 +90,7 @@ module Jekyll
       def description
         @description ||= begin
           format_string(page["description"] || page["excerpt"]) || site_description
-        end
+        endhttps://github.com/zivost/jekyll-seo-tag/blob/master/lib/jekyll-seo-tag/drop.rb
       end
 
       # A drop representing the page author
